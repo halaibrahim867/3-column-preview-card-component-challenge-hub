@@ -3,71 +3,92 @@
     --webkit-box-sizing: border-box;
     box-sizing: border-box;
 }
-.parent{
+.cars{
     display: grid;
-    grid-template-columns: repeat(3 ,250px);
+    grid-template-columns: repeat(3 ,280px);
     grid-template-rows: 1fr ;
     color: hsla(0, 0%, 100%, 0.75);
-    height: 400px;
-   justify-content: center;
-   border-radius: 10px;
+    height: 450px;
+    justify-content: center;
+    border-radius: 10px;
+    margin: 100px auto;
 }
 @media (max-width:768px){
-    .parent{
+    .cars{
         display: block;
         height: 500px;
         width: 220px;
         margin: auto;
     }
 }
-.parent div{
+.cars .car{
     padding: 30px;
 }
-.parent p {
-    margin-bottom:100px ;
+.cars .car h1{
+    font-family: 'Big Shoulders Display', cursive;
+    color:white;
+    font-weight: 700;
 }
-.parent a {
+.cars p {
+    font-family: 'Lexend Deca', sans-serif;
+    margin-bottom:100px;
+    line-height: 1.8;  
+    font-size: 13px; 
+    max-width: 11rem;
+}
+.cars a {
+    font-family: 'Lexend Deca', sans-serif;
     text-decoration: none;
-    background-color: hsla(0, 0%, 100%, 0.75);
+    background-color: white;
     border: 2px solid hsla(0, 0%, 100%, 0.75);
     padding: 10px 20px 10px 20px;
     border-radius: 64px;
 }
-.parent .child_2 a:hover{
+.cars .car a:hover{
     color: white;
-    background-color: hsl(184, 100%, 22%);
 }
-.parent .child_3 a:hover{
-    color: white;
-    background-color: hsl(179, 100%, 13%);
-}
-.parent .child_1 a:hover{
-    color: white;
-    background-color: hsl(31, 77%, 52%);
-}
-
-
-.parent .child_1{
+.cars .sedan{
     background-color: hsl(31, 77%, 52%);
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
 }
-.parent .child_1 a {
+
+@media (max-width:991px){
+    .cars .sedan {
+        border-bottom-left-radius: 0px;
+        border-top-right-radius: 10px;
+    }
+}
+.cars .sedan a {
     color: hsl(31, 77%, 52%);
 }
-.parent .child_2 {
+.cars .sedan a:hover{
+    background-color: hsl(31, 77%, 52%);
+}
+.cars .suvs {
     background-color: hsl(184, 100%, 22%);
 }
-.child_2 a {
+.suvs a {
     color: hsl(184, 100%, 22%);
 }
-.parent .child_3{
+.cars .suvs a:hover{
+    background-color: hsl(184, 100%, 22%);
+}
+.cars .luxury{
     background-color:  hsl(179, 100%, 13%);
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
 }
-
-.child_3 a {
+@media (max-width:991px){
+    .cars .luxury{
+        border-top-right-radius: 0px;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
+}
+.luxury a {
     color: hsl(179, 100%, 13%);
-
+}
+.cars .luxury a:hover{
+    background-color: hsl(179, 100%, 13%);
 }
